@@ -1,0 +1,10 @@
+name: imgToolEnv
+dependencies:
+    - python=3.8
+    - numpy
+    - pillow
+    - opencv
+    - tk
+    - pip
+    - pip:
+          - opencv-python
