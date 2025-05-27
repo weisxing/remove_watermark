@@ -37,7 +37,7 @@ pip install pyinstaller
 若需手动执行，命令如下（已包含隐藏控制台参数）：
 
 ```bash
-pyinstaller --noconsole -n "图片去水印工具" remove_watermark.py
+pyinstaller --noconsole --onefile -n "图片去水印工具" remove_watermark.py
 ```
 
 ### 3. 找到生成的 EXE 文件
