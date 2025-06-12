@@ -155,8 +155,15 @@ class WatermarkRemover:
         else:
             icon = 'info'
 
+
         # 设置图标
-        top.iconbitmap(default=tk.bitmap_types()[icon] if icon in tk.bitmap_types() else None)
+        # 尝试设置图标，兼容不同系统
+        try:
+            if icon in tk.image_types():
+                top.iconbitmap(default=tk.image_types()[icon])
+        except:
+            # 忽略图标设置失败的情况
+            pass
 
         # 等待窗口关闭
         self.root.wait_window(top)

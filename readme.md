@@ -58,3 +58,13 @@ pyinstaller --noconsole --onefile -n "图片去水印工具" remove_watermark.py
 ### 3. 找到生成的 EXE 文件
 
 打包完成后，可执行文件位于`dist/图片去水印工具.exe`目录下。
+
+## 已知问题和解决方案
+
+### 1. macOS系统下打开图片崩溃
+**问题描述**：在macOS系统运行时，打开图片可能会导致程序崩溃并显示`NSInvalidArgumentException`错误。
+**解决方案**：已修复，通过修改文件选择对话框的文件类型过滤器格式解决。
+
+### 2. Windows系统下提示缺少bitmap_types属性
+**问题描述**：在Windows系统运行时，操作过程中可能会出现`AttributeError: module 'tkinter' has no attribute 'bitmap_types'`错误。
+**解决方案**：已修复，通过替换为兼容的`image_types`方法并添加错误处理解决。
