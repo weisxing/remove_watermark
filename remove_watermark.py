@@ -166,7 +166,7 @@ class WatermarkRemover:
         self.root.update_idletasks()
 
         # 选择图片文件（支持中文路径）
-        file_path = filedialog.askopenfilename(filetypes=[('图片文件', '*.jpg;*.jpeg;*.png;*.webp'), ('JPG图片', '*.jpg;*.jpeg'), ('PNG图片', '*.png'), ('WEBP图片', '*.webp')])
+        file_path = filedialog.askopenfilename(filetypes=[('图片文件', ('*.jpg', '*.jpeg', '*.png', '*.webp')), ('JPG图片', ('*.jpg', '*.jpeg')), ('PNG图片', '*.png'), ('WEBP图片', '*.webp')])
         if not file_path:
             self.status_var.set('就绪: 请打开一张图片开始操作')
             return
